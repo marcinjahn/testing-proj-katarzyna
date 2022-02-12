@@ -68,7 +68,14 @@ Zadaniem dodatkowym (na teraz lub potem) będzie stworzenie przynajmniej szkiele
 
 ## Konfiguracja
 
-Aby móc testować zapytania do API przy użyciu `fetch()` musisz mieć zainstalowany np. `node-fetch` ([StackOverflow](https://stackoverflow.com/questions/48433783/referenceerror-fetch-is-not-defined)). Pamiętaj, aby zaimportować i przypisać do odpowiedniego elementu tj.:
+Aby móc testować zapytania do API przy użyciu `fetch()` musisz mieć zainstalowany np. `node-fetch` ([StackOverflow](https://stackoverflow.com/questions/48433783/referenceerror-fetch-is-not-defined)): 
+
+```
+npm i node-fetch@2
+```
+> Uwaga! Instalujemy wersję 2 ponieważ wersja 3 generuje błąd: "Cannot find module node:http"
+
+Pamiętaj, aby zaimportować oraz przypisać do odpowiedniego elementu tj.:
 
 ```
 import nodeFetch from "node-fetch"; // pobieram paczkę
