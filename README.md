@@ -115,6 +115,11 @@ To dlatego, że domyślnie `babel-jest` nie transpiluje plików wewnątrz katalo
 
 Teraz już wszystko powinno działać, jak należy. 
 
+## Pull request i code review
+1. Pamiętaj, aby nie pushować swojego _secret token_ na repozytorium na GitHubie. Możesz umieścić go np. w osobnym pliku, który dodasz do `.gitignore`.
+2. Abym mógł przetestować Twoje rozwiązanie, po wykonaniu pull requesta **prześlij mi swój token na Slacku** (a najlepiej **cały plik**, w którym go umieściłeś). Nie chcę używać tokena do własnego konta i ryzykować, że przypadkowo coś zostanie na nim zmienione :)
+3. Po otrzymaniu ode mnie code review usuń z GitHuba swój _secret token_, aby mieć pewność, że nie mam już dostępu.
+
 
 &nbsp;
 
