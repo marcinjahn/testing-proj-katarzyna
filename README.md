@@ -35,6 +35,8 @@ const gh = new GitHubSDK('devmentor-pl', 'secret-token');
 gh.sendInvitation('task-js-basics', 'bogolubow');
 ```
 
+> **Uwaga:** jeżeli wyślesz zaproszenie do użytkownika, który już został zaproszony do repo, to otrzymasz odpowiedź o statusie 204 bez zawartości. W takim przypadku próba zamienienia „niczego” na JSON będzie wywoływać błąd.
+
 Wewnątrz tej metody mieści się oczywiście kod, który wstawiłem na samym początku, jednak będziesz go mógł wygodnie wykorzystać w wielu innych projektach. To pozwoli Ci zaoszczędzić sporo czasu i optymalizować tworzenie nowych rozwiązań.
 
 > Zwróć uwagę, że w moim `fetch()` jest kilka dodatkowych opcji. Nie jest to związane z samym GitHub API. To opcje dostępne dla `fetch()`. Więcej o nich możesz przeczytać na [javascript.info](https://javascript.info/fetch-api).
