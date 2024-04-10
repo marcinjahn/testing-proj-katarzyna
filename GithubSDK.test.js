@@ -1,5 +1,19 @@
-import nodeFetch from "node-fetch"; // pobieram paczkę
-global.fetch = nodeFetch; // przypisuję do fetch pobraną paczkę, w Node.js global === window
+import { GithubSDK } from "./GithubSDK";
 
-test('1 + 1 = 2', () => { expect(1 + 1).toBe(2);
+describe('GithubSDK', () => {
+    it('fetches array of repositories', async () => {
+        const gh = new GithubSDK();
+
+        const repositories = await gh.getRepositories('KatarzynaDworak');
+
+        expect(Array.isArray(repositories)).toBe(true);
+    });
+
+    it('fetches repository practice-html-and-css-basics', async () => {
+        const gh = new GithubSDK();
+
+        const repositoryNames = (await gh.getRepositories('KatarzynaDworak')).map(repository => repository.name);
+
+        expect(repositoryNames).toContain('practice-html-and-css-basics');
+    });
 });
